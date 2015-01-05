@@ -1,0 +1,25 @@
+{
+    "configuration": { 
+        "status": "error", 
+        "appenders": {
+            "Console": {
+                "name": "Console",
+                "PatternLayout": { "pattern": "json - %m%n" }
+            }
+        },
+        "loggers": {
+            "logger": {
+                "name": "com.chf.example.apache.log4j.Bar", 
+                "level": "TRACE", 
+                "additivity": "false",
+                "AppenderRef": { 
+                    "ref": "Console" 
+                }
+            },
+            "root": { 
+                "level": "error", 
+                "AppenderRef": { "ref": "Console" }
+            }
+        }
+    }
+}
