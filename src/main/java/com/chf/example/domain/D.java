@@ -2,7 +2,10 @@ package com.chf.example.domain;
 
 import java.io.Serializable;
 
-public class D implements Serializable{
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
+@JsonAutoDetect
+public class D implements Serializable {
 
 	/**
 	 * 

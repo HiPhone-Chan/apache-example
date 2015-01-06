@@ -2,6 +2,9 @@ package com.chf.example.domain;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
+@JsonAutoDetect
 public class A implements Serializable {
 
 	/**
@@ -47,6 +50,12 @@ public class A implements Serializable {
 
 	public void setD(D d) {
 		this.d = d;
+	}
+
+	@Override
+	public String toString() {
+		return String
+				.format("A [str=%s, strA=%s, a=%s, d=%s]", str, strA, a, d);
 	}
 
 }
