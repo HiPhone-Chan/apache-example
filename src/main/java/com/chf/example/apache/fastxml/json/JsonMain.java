@@ -7,7 +7,7 @@ public class JsonMain {
 	public static void main(String[] args) {
 		A a = new A();
 		D d = new D("d");
-		a.setA(12);
+//		a.setA(12);
 		a.setD(d);
 		String str = JsonUtil.formObject(a);
 		System.out.println(a);

@@ -42,6 +42,7 @@ public class JsonUtil {
 		try {
 			t = mapper.readValue(json, cls);
 		} catch (Exception e) {
+			System.err.println(e.getMessage());
 		}
 		return t;
 	}

@@ -3,6 +3,7 @@ package com.chf.example.domain;
 import java.io.Serializable;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @JsonAutoDetect
 public class A implements Serializable {
@@ -14,6 +15,7 @@ public class A implements Serializable {
 
 	private String str;
 
+	@JsonIgnore
 	private String strA;
 
 	private int a;

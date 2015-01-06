@@ -2,15 +2,15 @@ package com.chf.example.domain;
 
 import java.io.Serializable;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-
-@JsonAutoDetect
 public class D implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
+	public D() {
+	}
 
 	public D(String str) {
 		this.str = str;

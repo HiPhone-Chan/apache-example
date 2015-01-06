@@ -8,7 +8,7 @@ public class XmlMain {
 		A a = new A();
 		D d = new D("d");
 		a.setA(12);
-//		a.setD(d);
+		a.setD(d);
 		String str = XmlUtil.formObject(a);
 		System.out.println(a);
 		System.out.println(str);
