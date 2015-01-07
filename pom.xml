@@ -5,6 +5,11 @@
 	<artifactId>apache-example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
+	<properties>
+		<com.fasterxml.version>2.5.0</com.fasterxml.version>
+		<org.log4j2.version>2.1</org.log4j2.version>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -39,25 +44,37 @@
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
-			<version>2.1</version>
+			<version>${org.log4j2.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
-			<version>2.1</version>
+			<version>${org.log4j2.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-yaml</artifactId>
-			<version>2.5.0</version>
+			<version>${com.fasterxml.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-xml</artifactId>
-			<version>2.5.0</version>
+			<version>${com.fasterxml.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-csv</artifactId>
+			<version>${com.fasterxml.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-smile</artifactId>
+			<version>${com.fasterxml.version}</version>
 		</dependency>
 	</dependencies>
 </project>
