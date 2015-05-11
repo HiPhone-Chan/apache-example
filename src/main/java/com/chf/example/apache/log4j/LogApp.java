@@ -11,6 +11,7 @@ public class LogApp {
 		logger.trace("Entering application.");
 		if (!Bar.doIt()) {
 			logger.error("Didn't do it.");
+			logger.error("This is %s, %s", "asd","asd");
 		}
 		logger.trace("Exiting application.");
 	}
