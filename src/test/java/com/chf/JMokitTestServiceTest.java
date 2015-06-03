@@ -1,11 +1,9 @@
 package com.chf;
 
 import mockit.Expectations;
-import mockit.integration.junit4.JMockit;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 import com.chf.example.other.test.TestService;
 
@@ -15,8 +13,7 @@ import com.chf.example.other.test.TestService;
  * @author c00251918
  *
  */
-@RunWith(JMockit.class)
-public class TestServiceTest2 {
+public class JMokitTestServiceTest {
 
 	@Test
 	public void testJMock() {
@@ -25,8 +22,16 @@ public class TestServiceTest2 {
 			{
 				TestService.getValue();
 				returns("3");
+
+				TestService.getValue("a");
+				returns("1");
+
+				TestService.getValue("b");
+				returns("2");
 			}
 		};
 		Assert.assertEquals("3", TestService.getValue());
+		Assert.assertEquals("2", TestService.getValue("b"));
+		Assert.assertEquals("1", TestService.getValue("a"));
 	}
 }

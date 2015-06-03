@@ -4,6 +4,7 @@ import org.jmock.Expectations;
 import org.jmock.Mockery;
 import org.jmock.integration.junit4.JUnit4Mockery;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.chf.example.other.test.MockDao;
@@ -14,9 +15,10 @@ import com.chf.example.other.test.TestService;
  * @author c00251918
  *
  */
-public class TestServiceTest {
+public class JmockTestServiceTest {
 
 	@Test
+	@Ignore
 	public void test() {
 		Mockery context = new JUnit4Mockery();
 
