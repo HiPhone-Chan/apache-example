@@ -1,14 +1,19 @@
 package com.chf.example.other.jdk;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
+
 import org.hibernate.validator.constraints.NotEmpty;
 
 public class ValidatedObj {
 
 	// @NotNull
-	@NotEmpty
+	@NotEmpty(message = "401")
 	private String str;
 
-	// @Min(2)
+	@Min(value = 2, message = "402")
+	@Max(value = 5, message = "403")
 	private int num;
 
 	public String getStr() {
@@ -29,7 +34,8 @@ public class ValidatedObj {
 
 	public static void main(String[] args) {
 		ValidatedObj obj = new ValidatedObj();
-		obj.setStr("as");
-		System.out.println(DataValidationUtils.check(obj));
+		// obj.setStr("");
+//		obj.setNum(6);
+		System.out.println(DataValidationUtils.check2(obj));
 	}
 }
