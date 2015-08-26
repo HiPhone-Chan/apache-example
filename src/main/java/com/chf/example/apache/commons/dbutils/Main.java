@@ -8,6 +8,7 @@ import javax.sql.DataSource;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 
+import com.chf.example.apache.commons.configuration.ConfigUtil;
 import com.chf.example.domain.AppInfo;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
@@ -45,18 +46,18 @@ public class Main {
     protected static DataSource getMysqlDataSource() {
         MysqlDataSource dataSource = new MysqlDataSource();
 
-        dataSource.setUrl("jdbc:mysql://192.168.10.72:3306/graypublish");
-        dataSource.setUser("root");
-        dataSource.setPassword("huawei");
+        dataSource.setUrl(ConfigUtil.getConfig("url"));
+        dataSource.setUser(ConfigUtil.getConfig("username"));
+        dataSource.setPassword(ConfigUtil.getConfig("password"));
 
         return dataSource;
     }
 
     private static DataSource getDbcpDataSource() {
         BasicDataSource dataSource = new BasicDataSource();
-        dataSource.setUrl("jdbc:mysql://192.168.10.72:3306/graypublish");
-        dataSource.setUsername("root");
-        dataSource.setPassword("huawei");
+        dataSource.setUrl(ConfigUtil.getConfig("url"));
+        dataSource.setUsername(ConfigUtil.getConfig("username"));
+        dataSource.setPassword(ConfigUtil.getConfig("password"));
 
         return dataSource;
     }
