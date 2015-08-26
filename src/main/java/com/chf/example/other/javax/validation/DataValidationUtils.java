@@ -1,4 +1,4 @@
-package com.chf.example.other.jdk;
+package com.chf.example.other.javax.validation;
 
 import java.util.Set;
 
