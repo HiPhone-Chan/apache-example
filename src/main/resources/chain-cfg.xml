@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+	<chain name="CommandChain">
+		<!-- 定义的顺序决定执行的顺序 -->
+		<command id="filter" className="com.chf.example.apache.commons.chain.MyFilter" />
+		<command id="command1" className="com.chf.example.apache.commons.chain.Command1" />
+		<command id="command2" className="com.chf.example.apache.commons.chain.Command2" />
+	</chain>
+	<command name="command2" className="com.chf.example.apache.commons.chain.Command2" />
+</catalog>
