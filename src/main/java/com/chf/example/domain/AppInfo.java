@@ -10,6 +10,18 @@ public class AppInfo {
 
     private String appDescription;
 
+    public AppInfo() {
+    }
+
+    public AppInfo(Long id, String appName, String appVersion,
+            String appDescription) {
+        super();
+        this.id = id;
+        this.appName = appName;
+        this.appVersion = appVersion;
+        this.appDescription = appDescription;
+    }
+
     public Long getId() {
         return id;
     }

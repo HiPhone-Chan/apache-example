@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<t_appinfo id="1" appDescription="app1" appName="app1"
+		appVersion="ver1" />
+	<t_appinfo id="2" appDescription="app2" appName="app2"
+		appVersion="ver2" />
+</dataset>
