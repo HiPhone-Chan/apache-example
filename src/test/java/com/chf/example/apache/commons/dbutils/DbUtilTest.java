@@ -6,21 +6,29 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.joda.time.DateTime;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.unitils.UnitilsJUnit4;
+import org.junit.runner.RunWith;
+import org.unitils.UnitilsJUnit4TestClassRunner;
 import org.unitils.database.DatabaseUnitils;
 import org.unitils.database.annotations.TestDataSource;
+import org.unitils.database.annotations.Transactional;
+import org.unitils.database.util.TransactionMode;
 import org.unitils.dbunit.annotation.DataSet;
 import org.unitils.dbunit.annotation.ExpectedDataSet;
 import org.unitils.dbunit.datasetloadstrategy.impl.CleanInsertLoadStrategy;
+import org.unitils.jodatime.annotation.FixedDateTime;
 import org.unitils.reflectionassert.ReflectionAssert;
 
 import com.chf.example.domain.AppInfo;
 
+@RunWith(UnitilsJUnit4TestClassRunner.class)
 @DataSet(value = { "DbUtilTest.xml" }, loadStrategy = CleanInsertLoadStrategy.class)
-public class DbUtilTest extends UnitilsJUnit4 {
+@Transactional(TransactionMode.ROLLBACK)
+public class DbUtilTest {
 
     @TestDataSource
     private DataSource dataSource;
@@ -62,6 +70,14 @@ public class DbUtilTest extends UnitilsJUnit4 {
 
         ReflectionAssert.assertLenientEquals(expectedList, appInfoList);
 
+    }
+
+    @Test
+    @FixedDateTime(datetime = "01/01/2016")
+    public void testTime() {
+        DateTime actual = new DateTime();
+        DateTime expected = new DateTime(2016, 1, 1, 0, 0, 0, 0);
+        Assert.assertEquals(expected, actual);
     }
 
 }
