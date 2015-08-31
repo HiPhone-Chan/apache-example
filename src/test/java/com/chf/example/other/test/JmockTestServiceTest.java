@@ -1,4 +1,4 @@
-package com.chf;
+package com.chf.example.other.test;
 
 import org.jmock.Expectations;
 import org.jmock.Mockery;
@@ -12,7 +12,7 @@ import com.chf.example.other.test.TestService;
 
 /**
  * use jMock
- * @author c00251918
+ * @author chhfeng
  *
  */
 public class JmockTestServiceTest {

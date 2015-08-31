@@ -1,4 +1,4 @@
-package com.chf;
+package com.chf.example.other.test;
 
 import mockit.Expectations;
 
@@ -10,7 +10,7 @@ import com.chf.example.other.test.TestService;
 /**
  * use jMockit
  * 
- * @author c00251918
+ * @author chhfeng
  *
  */
 public class JMokitTestServiceTest {
