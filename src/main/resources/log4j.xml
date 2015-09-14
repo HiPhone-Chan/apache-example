@@ -5,7 +5,7 @@
 	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern"
-				value="xml - %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+				value="%p %m - %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5l - %M%n" />
 		</layout>
 	</appender>
 
@@ -15,7 +15,7 @@
 	</logger>
 
 	<root>
-		<level value="ERROR" />
+		<level value="info" />
 		<appender-ref ref="STDOUT" />
 	</root>
 </log4j:configuration>
